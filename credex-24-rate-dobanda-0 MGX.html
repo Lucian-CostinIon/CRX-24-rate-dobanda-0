@@ -1,0 +1,437 @@
+<style>   
+.Cms h2 {
+    text-transform: none;
+    letter-spacing: normal;
+}
+.Cms a, .Cms h2 {
+    color: unset;
+}
+.u-heading-h4 {
+    line-height: 1.25em !important;
+    margin: 1em 0.5em !important;
+    font-size: 16.25px !important;
+}
+</style>
+<style>
+.Button-container
+    {
+        display: none;
+    }
+</style>
+
+<style>
+.CredexTitle span {
+    display: block;
+}
+.CredexPictureContainer {
+    text-align: center;
+}
+.CredexElementsContainer {
+    display: flex;
+    }
+.CredexElement {
+    position: relative;
+    flex: 1;
+    margin: 0 2px;
+    -webkit-transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    animation-name: CredexAnimation;
+    animation-duration: 1600ms;
+    animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    }     
+@keyframes CredexAnimation {
+    /* 0ms initial values */
+    0%     {}
+    /* 200ms */
+    12.5%  {        
+        top: -3px;
+        box-shadow: rgba(0,0,0,0.35) 2px 2px 16px 0;
+        -webkit-box-shadow: rgba(0,0,0,0.35) 2px 2px 16px 0;
+        -moz-box-shadow: rgba(0,0,0,0.35) 2px 2px 16px 0;        
+    }
+    
+    /* 400ms */    
+    25% {}
+    /* 1600 = 400 + (400*3) */
+    100%   {}
+
+} 
+    .CredexElement.-Delay2000ms {
+        animation-delay: 2000ms;
+    }
+    .CredexElement.-Delay2200ms {
+        animation-delay: 2400ms;
+    }
+    .CredexElement.-Delay2400ms {
+        animation-delay: 2800ms;
+    }       
+    .CredexElement:hover {
+        top: -3px;
+        box-shadow: rgba(0,0,0,0.35) 2px 2px 16px 0;
+        -webkit-box-shadow: rgba(0,0,0,0.35) 2px 2px 16px 0;
+        -moz-box-shadow: rgba(0,0,0,0.35) 2px 2px 16px 0;
+        }
+    .CredexElement span {
+        display: block;
+        }
+    
+.CredexExempluReprezentativ p {
+    text-align: left;
+    color: #58524E;
+    }
+.CredexExempluReprezentativ p span:nth-of-type(n+2) {
+    display: inline-block;
+    }
+p.CredexRegulament, div.CredexRegulament {
+    text-align: right;
+    }
+.CredexRegulament a {
+    color: #E41D34;
+    }
+a.CredexSpecialScroll, a.CredexSpecialScroll:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (max-width: 480px) {
+    .CredexElementsContainer {
+        flex-direction: column;
+    }  
+    .CredexElement {
+        margin: 2px 0px;
+        min-height: 130px;
+    }        
+}
+
+    @media (max-width: 1020px)
+{
+    .CredexElement h2
+    {
+        font-size: 16px;
+        line-height: 16px;
+    }        
+}
+</style>
+
+<style>
+.VeziMaiMulte
+{
+    clear: both;
+    position: relative;
+    display: block;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+    margin-bottom: 30px;
+    text-align: center;
+    z-index: 1;
+}
+
+    .-StyleATX
+    {
+        background: -o-linear-gradient(top, #D71440 0%, #A81033 100%);
+        background: -ms-linear-gradient(top, #D71440 0%, #A81033 100%);
+        background: -moz-linear-gradient(top, #D71440 0%, #A81033 100%);
+        background: -webkit-linear-gradient(top, #D71440 0%, #A81033 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #D71440), color-stop(100%, #A81033));        
+        background: linear-gradient(to bottom, #D71440 0%, #A81033 100%);      
+    }
+        .-StyleATX, .-StyleMGX
+        {
+            border-radius: 5px;
+            padding: 10px 0;
+            font-weight: 700;
+        }
+        .-StyleATX, .-StyleMGX
+        {
+            color: #fff;
+            text-decoration: none;
+        }
+        .-StyleATX:hover
+            {
+                background: #A81033;
+            }
+
+    .-StyleMGX
+        {
+            background: -o-linear-gradient(top, #244196 0%, #1A2E6B 100%);
+            background: -ms-linear-gradient(top, #244196 0%, #1A2E6B 100%);
+            background: -moz-linear-gradient(top, #244196 0%, #1A2E6B 100%);
+            background: -webkit-linear-gradient(top, #244196 0%, #1A2E6B 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #244196), color-stop(100%, #1A2E6B));
+            background: linear-gradient(to bottom, #244196 0%, #1A2E6B 100%);
+        }
+        .-StyleMGX:hover
+            {
+                background: #1A2E6B;
+            }
+
+    .DropdownLinks
+    {
+        position: relative;
+        display: block;
+        text-align: center;
+    }
+        .DropdownLinks a.VeziMaiMulte
+        {
+            margin-bottom: 0px;
+        }
+
+        .DropdownLinks a.VeziMaiMulte:after
+        {
+            content: "";
+            display: inline-block;
+            margin: 0 0.5em;
+            border: 7px solid transparent;
+            border-top: 8px solid white;
+            border-bottom: 0 none;
+        }
+        .DropdownLinks:hover .OtherLinks
+        {
+            display: inline-block;
+        }
+
+.OtherLinks
+{
+    display: none;
+    position: absolute;
+    background-color: #FBFBFB;
+    box-shadow: rgba(0,0,0,0.5) 2px 2px 16px 0;
+    -webkit-box-shadow: rgba(0,0,0,0.5) 2px 2px 16px 0;
+    -moz-box-shadow: rgba(0,0,0,0.5) 2px 2px 16px 0;
+    text-align: left;
+    z-index: 2;
+}
+    .OtherLinks a
+    {
+        display: block;
+        color: black;
+        padding: 12px 16px;
+        border-bottom: 1px solid rgba(0,0,0,.5);
+        text-decoration: none;
+    }
+    .OtherLinks a:last-of-type
+    {
+        border-bottom: none;
+    }
+    .OtherLinks a:hover
+    {
+    background-color: #F5F5F5;
+    }
+</style>
+
+<div class="CredexPictureContainer">
+    <picture>
+        <source media="(max-width:  320px)" srcset="//media.altex.ro/LP/CRX/24-rate-dobanda-0/credex-24-rate-dobanda-0_320x300_f299747c.png">
+        <source media="(max-width:  360px)" srcset="//media.altex.ro/LP/CRX/24-rate-dobanda-0/credex-24-rate-dobanda-0_360x300_f2374251.png">    
+        <source media="(max-width: 1000px)" srcset="//media.altex.ro/LP/CRX/24-rate-dobanda-0/credex-24-rate-dobanda-0_1000x300_cc131148.png">        
+
+        <img src="//media.altex.ro/LP/CRX/24-rate-dobanda-0/credex-24-rate-dobanda-0_1000x300_cc131148.png" sizes="100vw" alt="">
+    </picture>
+    <div class="CredexRegulament">
+            <span>*electrcasnice mari marca Electrolux, Zanussi si AEG</span>
+    </div>
+</div>
+
+<h1 class="CredexTitle u-heading-section u-text-align-center"><span>Cumpara acum in 24 RATE cu DOBANDA 0%</span><span> in 3 pasi simpli</span></h1>
+
+<div class="CredexElementsContainer u-space-mt-15 u-space-mb-15 u-text-align-center">
+<div class="CredexElement -Delay2000ms u-text-align-center u-bgcolor-light-gray u-border-radius u-color-black u-space-p-10">
+    <a class="CredexSpecialScroll" href="#Credex00">
+        <h2>
+            <span>Pasul 1: </span>
+            <span>Alege produsele</span>
+        </h2>
+        <p>Doar din produsele si categoriile de mai jos</p>
+    </a>
+</div>
+<div class="CredexElement -Delay2200ms u-text-align-center u-bgcolor-light-gray u-border-radius u-color-black u-space-p-10">
+    <a class="CredexSpecialScroll" href="#Credex00">
+        <h2>
+            <span>Pasul 2: </span>
+            <span>Intra in legatura video cu un consultant financiar</span>
+        </h2>
+        <p>Asigura-te ca ai la indemana cartea de identitate si ca ai un dispozitiv cu camera video si microfon</p>
+    </a>
+</div>
+<div class="CredexElement -Delay2400ms u-text-align-center u-bgcolor-light-gray u-border-radius u-color-black u-space-p-10">
+    <a class="CredexSpecialScroll" href="#Credex00">
+        <h2>
+            <span>Pasul 3: </span>
+            <span>Semneaza online contractul</span>
+        </h2>
+        <p>Media Galaxy iti va trimite produsele prin curier direct la tine acasa</p>
+    </a>
+</div>
+</div>
+
+<div id="Credex00"></div>
+
+<div id="L-CI">
+    <h2 class="u-heading-section u-container-full u-border-b-solid lg-u-border-none u-space-mt-0 u-text-align-center">Alege aparate de aer conditionat:</h2>
+    <div class="PriceDescending">
+{{block type="altex_recommend/display_view" name="custom_container" container="403" hideChildBlock="altex_reservations_catalog_product_container" }}
+    </div>
+
+    <a class="VeziMaiMulte -StyleMGX" href="https://mediagalaxy.ro/aer-conditionat-climatizare/aer-conditionat/filtru/order/price/dir/desc/" target="_blank">
+        Vezi aici toate aparatele de aer conditionat care beneficiaza de 24 de rate dobanda 0%                                                   
+    </a>
+
+
+
+    <h2 class="u-heading-section u-container-full u-border-b-solid lg-u-border-none u-space-mt-0 u-text-align-center">Alege electrocasnice mari marca Electrolux, Zanussi, AEG:</h2>
+    <div class="PriceDescending">
+{{block type="altex_recommend/display_view" name="custom_container" container="404" hideChildBlock="altex_reservations_catalog_product_container" }}
+    </div>
+    
+    <div class="DropdownLinks">        
+        <a href="" class="VeziMaiMulte -StyleMGX">
+            Vezi aici toate electrocasnicele mari Electrolux, Zanussi, AEG care beneficiaza de 24 de rate dobanda 0%                                                   
+        </a>        
+        <div class="OtherLinks">
+            <a href="https://mediagalaxy.ro/search/filtru/cat/433-electrocasnice-mari/brand-3334/electrolux/order/price/dir/desc/?q=Electrolux" target="_blank">Electrolux</a>
+            <a href="https://mediagalaxy.ro/search/filtru/cat/433-electrocasnice-mari/brand-3334/zanussi/order/price/dir/desc/?q=Zanussi" target="_blank">Zanussi</a>
+            <a href="https://mediagalaxy.ro/search/filtru/cat/433-electrocasnice-mari/brand-3334/aeg/order/price/dir/desc/?q=AEG" target="_blank">AEG</a>
+        </div>
+        
+    </div>
+
+
+
+    <h2 class="u-heading-section u-container-full u-border-b-solid lg-u-border-none u-space-mt-0 u-text-align-center">Alege smartphone marca Samsung S9, S9+:</h2>
+    <div class="PriceDescending">
+{{block type="altex_recommend/display_view" name="custom_container" container="406" hideChildBlock="altex_reservations_catalog_product_container" }}
+    </div>
+
+    <a class="VeziMaiMulte -StyleMGX" href="https://mediagalaxy.ro/search/filtru/brand-3334/samsung/cat/283-smartphones/order/price/dir/desc/?q=samsung%20S9" target="_blank">
+        Vezi aici toate smartphone Samsung S9, S9+ care beneficiaza de 24 de rate dobanda 0%                                                   
+    </a>
+
+
+
+    <h2 class="u-heading-section u-container-full u-border-b-solid lg-u-border-none u-space-mt-0 u-text-align-center">Alege laptop-uri marca Asus:</h2>
+    <div class="PriceDescending">
+{{block type="altex_recommend/display_view" name="custom_container" container="405" hideChildBlock="altex_reservations_catalog_product_container" }}
+    </div>
+    <a class="VeziMaiMulte -StyleMGX" href="https://mediagalaxy.ro/laptop-desktop-it/laptopuri/filtru/brand-3334/asus/order/price/dir/desc/" target="_blank">
+        Vezi aici toate laptop-urile Asus care beneficiaza de 24 de rate dobanda 0%                                                   
+    </a>
+</div>
+
+<div class="CredexExempluReprezentativ u-space-mt-15 u-space-mb-15 u-text-align-center u-bgcolor-light-gray u-border-radius u-color-black u-space-p-10">
+    <p>
+        <span class="u-color-black">Exemplu reprezentativ:</span>
+        <span> Pentru achizitia de bunuri prin intermediul cardului de credit oferit de TBI Credit in valoare de 6.500 lei, &nbsp;rambursata in 24 de rate lunare, &nbsp;cu o dobanda 0%, &nbsp;un comision de analiza de 100 lei si un comision de administrare credit de 5 Lei pe luna, &nbsp;valoarea ratei lunare este de 280 lei, &nbsp;valoarea totala platibila fiind 6.720 lei, &nbsp;DAE 3,26%.</span>
+        <span>&nbsp;</span>
+        <span>Aceste valori sunt calculate in cazul in care nu se efectueaza nicio alta tranzactie pana la rambursarea integrala a creditului, &nbsp;iar fiecare rata lunara egala este achitata integral de catre Detinator.</span>        
+    </p>
+</div>
+
+<p class="CredexRegulament">
+	<span>Promotie valabila in perioada 22 mai 2018 - 06 iunie 2018.&nbsp;Vezi&nbsp;<a href="/regulament-credex-24-rate-dobanda-0" target="_blank">regulament</a>.&nbsp;CREDEX &nbsp;-&nbsp;Un pas spre mai bine.</span>
+</p>
+
+<script type="text/javascript">    
+	var j, i, Widgets, List, Switching, Element, ShouldSwitch, Direction;
+    Widgets = document.getElementById("L-CI").getElementsByTagName("UL");
+    for (j = 0; j < Widgets.length; j++)
+        {
+            List = Widgets[j];
+            Direction = List.parentElement.className;
+            /* make a loop that will continue until no switching has been done */
+            Switching = true;
+            while (Switching) {
+                /* Start by saying no switching is done */
+                Switching = false;
+                Element = List.getElementsByTagName("LI");
+                /* loop through all list items */
+                for (i = 0; i < (Element.length - 1); i++)
+                {
+                    /* start by saying there should be no switching */
+                    ShouldSwitch = false;
+                    if (Direction == "PriceDescending" || Direction == "PriceAscending")
+                    {
+                        CurrentElement = Number(Element[i].getElementsByClassName("Price-int")[0].innerHTML.replace(/[^0-9]+/g, ""));
+                        NextElement = Number(Element[i + 1].getElementsByClassName("Price-int")[0].innerHTML.replace(/[^0-9]+/g, ""));
+                        if(Direction == "PriceDescending" && CurrentElement < NextElement) {
+                            ShouldSwitch = true;
+                            break;
+                        } else if (Direction == "PriceAscending" && CurrentElement > NextElement) {
+                            ShouldSwitch = true;
+                            break;
+                        }
+                    } else if (Direction == "ReducereDescending" || Direction == "ReducereAscending")
+                    {
+                        CurrentElement = Element[i].getElementsByClassName("Badge-reducere")[0].innerText;
+                        NextElement = Element[i + 1].getElementsByClassName("Badge-reducere")[0].innerText;
+                        if(Direction == "ReducereDescending" && CurrentElement < NextElement) {
+                            ShouldSwitch = true;
+                            break;
+                        } else if (Direction == "ReducereAscending" && CurrentElement > NextElement) {
+                            ShouldSwitch = true;
+                            break;
+                        }                        
+                    }
+                    else if (Direction == "ProductCodes")
+                        {
+                            CurrentElement = Element[i].getElementsByClassName("Status")[0].getElementsByClassName("u-display-none");
+                            
+                        }
+                }
+                if (ShouldSwitch) {
+                    Element[i].parentNode.insertBefore(Element[i + 1], Element[i]);
+                    Switching = true;
+                }
+            }
+        }
+</script>
+
+<script type = "text/javascript">
+/* Modyfied on 02/10/2017 by L-CI after Gabriel Delépine 1.3.1 */
+var height_fixed_header = 0, /* For layout with header with position:fixed. Write here the height of your header so your anchor will not be hidden behind */
+	speed = 1000,
+	moving_frequency = 15, /* Affects performance ! A Higher number makes scroll more smooth */
+	links = document.getElementsByClassName("CredexSpecialScroll"),
+	href;
+for (var i = 0; i < links.length; i++) {
+	href = (links[i].attributes.href === undefined) ? null : links[i].attributes.href.nodeValue.toString();
+	if (href !== null && href.length > 1 && href.indexOf('#') != -1) /* href.substr(0, 1) == '#' */
+	{
+		links[i].onclick = function() {
+			var element,
+				href = this.attributes.href.nodeValue.toString(),
+				url = href.substr(0, href.indexOf('#')),
+				id = href.substr(href.indexOf('#') + 1);
+			if (element = document.getElementById(id)) {
+				var hop_count = (speed - (speed % moving_frequency)) / moving_frequency, /* Always make an integer */
+					getScrollTopDocumentAtBegin = getScrollTopDocument(),
+					gap = (getScrollTopElement(element) - getScrollTopDocumentAtBegin) / hop_count;
+				if (window.history && typeof window.history.pushState == 'function')
+                {
+                    window.history.pushState({}, undefined, url + '#' + id); /* Change URL for modern browser */                    
+                }
+				for (var i = 1; i <= hop_count; i++) {
+					(function() {
+						var hop_top_position = gap * i;
+						setTimeout(function() {
+							window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin);
+						}, moving_frequency * i);
+					})();
+				}
+				return false;
+			}
+		};
+	}
+}
+var getScrollTopElement = function(e) {
+	var top = height_fixed_header * -1;
+	while (e.offsetParent != undefined && e.offsetParent != null) {
+		top += e.offsetTop + (e.clientTop != null ? e.clientTop : 0);
+		e = e.offsetParent;
+	}
+	return top;
+};
+var getScrollTopDocument = function() {
+	return window.pageYOffset !== undefined ? window.pageYOffset : document.documentElement.scrollTop !== undefined ? document.documentElement.scrollTop : document.body.scrollTop;
+};
+</script>
